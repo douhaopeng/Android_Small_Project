@@ -9,6 +9,7 @@ package com.ks.test;
 public class MainActivity extends AppCompatActivity {
 
     private Button mBtnTextView;
+    private Button mBtbButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +19,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,Main2Activity.class);
+                startActivity(intent);
+            }
+        });
+        mBtbButton = (Button) findViewById(R .id.btn_button);
+        mBtbButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,ButtonActivity.class);
                 startActivity(intent);
             }
         });
