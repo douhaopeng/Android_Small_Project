@@ -25,6 +25,14 @@ tools:context="com.ks.test.MainActivity">
     android:text="Button"/>
 
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_edittext"
+        android:text="EditText"
+        android:textAllCaps="false"/>
+
+
 
 </LinearLayout>
 
