@@ -45,7 +45,7 @@
         android:id="@+id/btn_login"
         android:layout_below="@+id/et_2"
         android:layout_marginTop="40dp"
-        android:background="@drawable/bg_btm4"
+        android:background="@drawable/selector_orange"
         android:text="登录"
         android:textColor="#fff"
         android:textSize="20sp"
