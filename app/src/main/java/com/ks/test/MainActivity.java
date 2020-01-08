@@ -8,6 +8,7 @@ package com.ks.test;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Button mBtnCheckBox;
     private Button mBtnTextView;
     private Button mBtbButton;
     private Button mBtnEditText;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         mBtbButton = (Button) findViewById(R .id.btn_button);
         mBtnEditText = (Button) findViewById(R.id.btn_edittext);
         mBtnRadioButton = (Button) findViewById(R.id.btn_radiobutton);
+        mBtnCheckBox = (Button) findViewById(R.id.btn_checkbox);
         setListener();
     }
 
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         mBtbButton.setOnClickListener(onClick);
         mBtnEditText.setOnClickListener(onClick);
         mBtnRadioButton.setOnClickListener(onClick);
+        mBtnCheckBox.setOnClickListener(onClick);
 
     }
     public class OnClick implements View.OnClickListener{
@@ -55,6 +58,9 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_radiobutton:
                      intent = new Intent(MainActivity.this,RadioButtonActivity.class);
 
+                    break;
+                case R.id.btn_checkbox:
+                    intent = new Intent(MainActivity.this,CheckBoxActivity.class);
                     break;
 
             }
