@@ -46,6 +46,13 @@ tools:context="com.ks.test.MainActivity">
         android:text="CheckBox"
         android:textAllCaps="false"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_imageview"
+        android:text="ImageView"
+        android:textAllCaps="false"/>
+
 
 
 </LinearLayout>
