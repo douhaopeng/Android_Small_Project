@@ -47,12 +47,19 @@ tools:context="com.ks.test.MainActivity">
         android:textAllCaps="false"/>
 
     <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/btn_imageview"
+    android:text="ImageView"
+    android:textAllCaps="false"/>
+
+
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_imageview"
-        android:text="ImageView"
+        android:id="@+id/btn_listview"
+        android:text="ListView"
         android:textAllCaps="false"/>
-
 
 
 </LinearLayout>

@@ -6,6 +6,8 @@ package com.ks.test;
         import android.view.View;
         import android.widget.Button;
 
+        import com.ks.test.ListView.ListtViewActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button mBtnCheckBox;
@@ -14,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnEditText;
     private Button mBtnRadioButton;
     private Button mBtnImageView;
+    private Button mBtnListView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnRadioButton = (Button) findViewById(R.id.btn_radiobutton);
         mBtnCheckBox = (Button) findViewById(R.id.btn_checkbox);
         mBtnImageView = (Button) findViewById(R.id.btn_imageview);
+        mBtnListView = (Button) findViewById(R.id.btn_listview);
         setListener();
     }
 
@@ -37,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnRadioButton.setOnClickListener(onClick);
         mBtnCheckBox.setOnClickListener(onClick);
         mBtnImageView.setOnClickListener(onClick);
+        mBtnListView.setOnClickListener(onClick);
 
     }
     public class OnClick implements View.OnClickListener{
@@ -68,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_imageview:
                     intent = new Intent(MainActivity.this,imageViewActivity.class);
+                    break;
+                case R.id.btn_listview:
+                    intent = new Intent(MainActivity.this,ListtViewActivity.class);
                     break;
 
             }

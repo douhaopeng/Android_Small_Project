@@ -25,7 +25,10 @@
         <activity android:name=".EditTextActivity" />
         <activity android:name=".RadioButtonActivity" />
         <activity android:name=".CheckBoxActivity" />
-        <activity android:name=".imageViewActivity"></activity>
+        <activity android:name=".imageViewActivity"/>
+        <activity android:name=".ListView.ListtViewActivity">
+
+        </activity>
     </application>
 
 </manifest>
