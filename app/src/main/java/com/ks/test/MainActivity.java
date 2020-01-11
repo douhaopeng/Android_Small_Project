@@ -7,6 +7,7 @@ package com.ks.test;
         import android.widget.Button;
 
         import com.ks.test.ListView.ListtViewActivity;
+        import com.ks.test.gridview.GridViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnRadioButton;
     private Button mBtnImageView;
     private Button mBtnListView;
+    private Button mBtnGridView;
 
 
     @Override
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnCheckBox = (Button) findViewById(R.id.btn_checkbox);
         mBtnImageView = (Button) findViewById(R.id.btn_imageview);
         mBtnListView = (Button) findViewById(R.id.btn_listview);
+        mBtnGridView = (Button) findViewById(R.id.btn_gridview);
         setListener();
     }
 
@@ -43,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnCheckBox.setOnClickListener(onClick);
         mBtnImageView.setOnClickListener(onClick);
         mBtnListView.setOnClickListener(onClick);
+        mBtnGridView.setOnClickListener(onClick);
 
     }
     public class OnClick implements View.OnClickListener{
@@ -78,6 +82,10 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_listview:
                     intent = new Intent(MainActivity.this,ListtViewActivity.class);
                     break;
+                case R.id.btn_gridview:
+                    intent = new Intent(MainActivity.this,GridViewActivity.class);
+                    break;
+
 
             }
             startActivity(intent);
