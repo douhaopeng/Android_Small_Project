@@ -2,9 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ks.test">
 
-    <uses-permission android:name="android.permission.INTERNET">
-
-    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -25,13 +23,14 @@
         <activity android:name=".EditTextActivity" />
         <activity android:name=".RadioButtonActivity" />
         <activity android:name=".CheckBoxActivity" />
-        <activity android:name=".imageViewActivity"/>
-        <activity android:name=".ListView.ListtViewActivity">
-        </activity>
-        <activity android:name=".gridview.GridViewActivity">
-        </activity>
+        <activity android:name=".imageViewActivity" />
+        <activity android:name=".ListView.ListtViewActivity" />
+        <activity android:name=".gridview.GridViewActivity" />
+        <activity android:name=".recycleview.RecycleViewActivity" />
+        <activity android:name=".recycleview.LinearRecycleViewActivity" />
+        <activity android:name=".recycleview.HorRecycleViewActivity" />
+        <activity android:name=".recycleview.GridRecycleViewActivity" />
+        <activity android:name=".recycleview.PullRecycleActivity"></activity>
     </application>
-
-
 
 </manifest>

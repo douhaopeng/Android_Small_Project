@@ -3,11 +3,13 @@ package com.ks.test;
         import android.content.Intent;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
+        import android.support.v7.widget.RecyclerView;
         import android.view.View;
         import android.widget.Button;
 
         import com.ks.test.ListView.ListtViewActivity;
         import com.ks.test.gridview.GridViewActivity;
+        import com.ks.test.recycleview.RecycleViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnImageView;
     private Button mBtnListView;
     private Button mBtnGridView;
+    private Button mBtnRecycleView;
+
 
 
     @Override
@@ -33,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnImageView = (Button) findViewById(R.id.btn_imageview);
         mBtnListView = (Button) findViewById(R.id.btn_listview);
         mBtnGridView = (Button) findViewById(R.id.btn_gridview);
+        mBtnRecycleView = (Button) findViewById(R.id.btn_Recycleview);
         setListener();
     }
 
@@ -47,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnImageView.setOnClickListener(onClick);
         mBtnListView.setOnClickListener(onClick);
         mBtnGridView.setOnClickListener(onClick);
+        mBtnRecycleView.setOnClickListener(onClick);
 
     }
     public class OnClick implements View.OnClickListener{
@@ -84,6 +90,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_gridview:
                     intent = new Intent(MainActivity.this,GridViewActivity.class);
+                    break;
+                case R.id.btn_Recycleview:
+                    intent = new Intent(MainActivity.this,RecycleViewActivity.class);
                     break;
 
 
