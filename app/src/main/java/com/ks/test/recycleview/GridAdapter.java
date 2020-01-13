@@ -1,15 +1,15 @@
 package com.ks.test.recycleview;
 
-import android.content.Context;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
+        import android.content.Context;
+        import android.support.v7.widget.RecyclerView;
+        import android.view.LayoutInflater;
+        import android.view.View;
+        import android.view.ViewGroup;
+        import android.widget.TextView;
 
-import com.ks.test.R;
+        import com.ks.test.R;
 
-import java.util.List;
+        import java.util.List;
 
 /**
  * Created by AKADHP on 2020/1/12.
