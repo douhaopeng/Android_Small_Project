@@ -111,6 +111,13 @@ tools:context="com.ks.test.MainActivity">
             android:id="@+id/btn_Recycleview"
             android:text="Recycleview"
             android:textAllCaps="false"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_Webview"
+            android:text="Webview"
+            android:textAllCaps="false"/>
     </LinearLayout>
 
 

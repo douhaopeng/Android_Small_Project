@@ -30,7 +30,8 @@
         <activity android:name=".recycleview.LinearRecycleViewActivity" />
         <activity android:name=".recycleview.HorRecycleViewActivity" />
         <activity android:name=".recycleview.GridRecycleViewActivity" />
-        <activity android:name=".recycleview.PullRecycleActivity"></activity>
+        <activity android:name=".recycleview.PullRecycleActivity" />
+        <activity android:name=".WebViewActivity"></activity>
     </application>
 
 </manifest>
