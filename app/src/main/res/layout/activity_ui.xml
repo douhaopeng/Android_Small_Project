@@ -131,6 +131,13 @@ tools:context="com.ks.test.UIActivity">
             android:id="@+id/btn_dialog"
             android:text="dialog"
             android:textAllCaps="false"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_progress"
+            android:text="Progress"
+            android:textAllCaps="false"/>
     </LinearLayout>
 
 
