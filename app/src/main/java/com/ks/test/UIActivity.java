@@ -25,6 +25,9 @@ public class UIActivity extends AppCompatActivity {
     private Button mBtnToast;
     private Button mBtnDialog;
     private Button mBtnProgress;
+    private Button mBtnPop;
+    private Button mBtnLife;
+
 
 
 
@@ -45,6 +48,8 @@ public class UIActivity extends AppCompatActivity {
         mBtnToast = (Button) findViewById(R.id.btn_Toast);
         mBtnDialog = (Button) findViewById(R.id.btn_dialog);
         mBtnProgress = (Button) findViewById(R.id.btn_progress);
+        mBtnPop = (Button) findViewById(R.id.btn_popwindow);
+        mBtnLife = (Button) findViewById(R.id.btn_life);
         setListener();
     }
 
@@ -62,7 +67,8 @@ public class UIActivity extends AppCompatActivity {
         mBtnRecycleView.setOnClickListener(onClick);
         mBtnWebView.setOnClickListener(onClick);
         mBtnToast.setOnClickListener(onClick);
-
+        mBtnLife.setOnClickListener(onClick);
+        mBtnPop.setOnClickListener(onClick);
         mBtnProgress.setOnClickListener(onClick);
         mBtnDialog.setOnClickListener(onClick);
 
@@ -118,6 +124,12 @@ public class UIActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_progress:
                     intent = new Intent(UIActivity.this,ProgressActivity.class);
+                    break;
+                case R.id.btn_popwindow:
+                    intent = new Intent(UIActivity.this,popupWIndowActivity.class);
+                    break;
+                case R.id.btn_life:
+                    intent = new Intent(UIActivity.this,LifeActivity.class);
                     break;
 
 
