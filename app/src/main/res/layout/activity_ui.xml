@@ -152,6 +152,13 @@ tools:context="com.ks.test.UIActivity">
             android:text="Life"
             android:textAllCaps="false"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_jump"
+            android:text="Jump"
+            android:textAllCaps="false"/>
+
     </LinearLayout>
 
 

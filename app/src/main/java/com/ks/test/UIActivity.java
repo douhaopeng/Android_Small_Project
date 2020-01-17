@@ -8,6 +8,7 @@ package com.ks.test;
 
         import com.ks.test.ListView.ListtViewActivity;
         import com.ks.test.gridview.GridViewActivity;
+        import com.ks.test.jump.AAActivity;
         import com.ks.test.recycleview.RecycleViewActivity;
 
 public class UIActivity extends AppCompatActivity {
@@ -27,6 +28,8 @@ public class UIActivity extends AppCompatActivity {
     private Button mBtnProgress;
     private Button mBtnPop;
     private Button mBtnLife;
+    private Button mBtnJump;
+
 
 
 
@@ -50,6 +53,7 @@ public class UIActivity extends AppCompatActivity {
         mBtnProgress = (Button) findViewById(R.id.btn_progress);
         mBtnPop = (Button) findViewById(R.id.btn_popwindow);
         mBtnLife = (Button) findViewById(R.id.btn_life);
+        mBtnJump = (Button) findViewById(R.id.btn_jump);
         setListener();
     }
 
@@ -71,6 +75,7 @@ public class UIActivity extends AppCompatActivity {
         mBtnPop.setOnClickListener(onClick);
         mBtnProgress.setOnClickListener(onClick);
         mBtnDialog.setOnClickListener(onClick);
+        mBtnJump.setOnClickListener(onClick);
 
     }
      class OnClick implements View.OnClickListener{
@@ -130,6 +135,9 @@ public class UIActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_life:
                     intent = new Intent(UIActivity.this,LifeActivity.class);
+                    break;
+                case R.id.btn_jump:
+                    intent = new Intent(UIActivity.this,AAActivity.class);
                     break;
 
 
