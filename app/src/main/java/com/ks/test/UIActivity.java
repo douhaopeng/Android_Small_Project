@@ -6,6 +6,7 @@ package com.ks.test;
         import android.view.View;
         import android.widget.Button;
 
+        import com.ks.test.Fragment.ContainActivity;
         import com.ks.test.ListView.ListtViewActivity;
         import com.ks.test.gridview.GridViewActivity;
         import com.ks.test.jump.AAActivity;
@@ -29,6 +30,7 @@ public class UIActivity extends AppCompatActivity {
     private Button mBtnPop;
     private Button mBtnLife;
     private Button mBtnJump;
+    private Button mBtnfragment;
 
 
 
@@ -54,6 +56,7 @@ public class UIActivity extends AppCompatActivity {
         mBtnPop = (Button) findViewById(R.id.btn_popwindow);
         mBtnLife = (Button) findViewById(R.id.btn_life);
         mBtnJump = (Button) findViewById(R.id.btn_jump);
+        mBtnfragment = (Button) findViewById(R.id.btn_fragment);
         setListener();
     }
 
@@ -76,6 +79,7 @@ public class UIActivity extends AppCompatActivity {
         mBtnProgress.setOnClickListener(onClick);
         mBtnDialog.setOnClickListener(onClick);
         mBtnJump.setOnClickListener(onClick);
+        mBtnfragment.setOnClickListener(onClick);
 
     }
      class OnClick implements View.OnClickListener{
@@ -140,6 +144,9 @@ public class UIActivity extends AppCompatActivity {
                     intent = new Intent(UIActivity.this,AAActivity.class);
                     break;
 
+                case R.id.btn_fragment:
+                    intent = new Intent(UIActivity.this,ContainActivity.class);
+                    break;
 
 
             }

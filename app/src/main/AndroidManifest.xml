@@ -40,17 +40,21 @@
         <activity android:name=".ProgressActivity" />
         <activity android:name=".popupWIndowActivity" />
         <activity android:name=".LifeActivity" />
-        <activity android:name=".jump.AAActivity"
-            android:label="A"/>
-        <activity android:name=".jump.BActivity"
-            android:label="B">
-
+        <activity
+            android:name=".jump.AAActivity"
+            android:label="A"
+            android:launchMode="standard" />
+        <activity
+            android:name=".jump.BActivity"
+            android:label="B"
+            android:launchMode="standard">
             <intent-filter>
                 <action android:name="com.ks.test.jump.BActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".Fragment.ContainActivity"></activity>
     </application>
 
 </manifest>
