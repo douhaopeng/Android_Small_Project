@@ -6,16 +6,15 @@
     android:layout_height="match_parent"
     tools:context="com.ks.test.Fragment.ContainActivity">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="更换fragment"
-        android:id="@+id/btn_change"/>
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:text="更换fragment"-->
+        <!--android:id="@+id/btn_change"/>-->
 
     <FrameLayout
         android:id="@+id/fl_container"
         android:layout_width="match_parent"
-        android:layout_below="@+id/btn_change"
         android:layout_height="match_parent">
 
     </FrameLayout>
