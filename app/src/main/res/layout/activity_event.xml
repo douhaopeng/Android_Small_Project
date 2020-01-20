@@ -4,21 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.ks.test.MainActivity">
+    tools:context="com.ks.test.EventActivity">
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_ui"
-        android:text="UI"
-        android:textAllCaps="false"/>
-    <Button
+        android:id="@+id/btn_event"
+        android:text="click me"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content" />
+
+    <com.ks.test.widget.MyButton
+        android:text="MyButton"
+        android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_shijian"
-        android:text="事件机制"
-        android:textAllCaps="false"/>
+        android:id="@+id/btn_my"/>
 
 
 </LinearLayout>

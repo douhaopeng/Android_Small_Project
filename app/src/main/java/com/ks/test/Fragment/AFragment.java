@@ -22,8 +22,9 @@ public class AFragment extends Fragment {
 
     private TextView mTvTitle;
     private Activity mActivity;
-    private Button mBtnChange,mBtnReset;
+    private Button mBtnChange,mBtnReset,mBtnMessege;
     private BFragment bFragment;
+    private IOnMessegeClick listener;
 
 
     public static AFragment newInstance(String title){
@@ -33,6 +34,20 @@ public class AFragment extends Fragment {
         fragment.setArguments(bundle);
         return fragment;
     }
+
+    public interface IOnMessegeClick{
+
+        void onCLick(String text);
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+
+        listener = (IOnMessegeClick) context;
+
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -49,6 +64,7 @@ public class AFragment extends Fragment {
         mTvTitle = view.findViewById(R.id.tv_title);
         mBtnChange = view.findViewById(R.id.btn_change);
         mBtnReset = view.findViewById(R.id.btn_reset);
+        mBtnMessege = view.findViewById(R.id.btn_messege);
         mBtnChange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,7 +73,21 @@ public class AFragment extends Fragment {
                     bFragment = new BFragment();
                 }
 
-                getFragmentManager().beginTransaction().replace(R.id.fl_container,bFragment).commitAllowingStateLoss();
+                Fragment fragment =  getFragmentManager().findFragmentByTag("a");
+                if(fragment!=null){
+                    getFragmentManager().beginTransaction().hide(fragment).add(R.id.fl_container,bFragment).addToBackStack(null).commitAllowingStateLoss();
+                }else{
+                    getFragmentManager().beginTransaction().replace(R.id.fl_container,bFragment).addToBackStack(null).commitAllowingStateLoss();
+                }
+
+            }
+        });
+
+        mBtnMessege.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                ((ContainActivity)getActivity()).setData("你好");
+                listener.onCLick("你好");
 
             }
         });
@@ -74,10 +104,6 @@ public class AFragment extends Fragment {
 
     }
 
-    @Override
-    public void onDetach() {
-        super.onDetach();
-    }
 
 
 }

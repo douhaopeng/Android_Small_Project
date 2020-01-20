@@ -8,6 +8,13 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:text="给Activity传递消息"
+        android:textAllCaps="false"
+        android:id="@+id/btn_messege"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:text="更换为Bfragment"
         android:textAllCaps="false"
         android:id="@+id/btn_change"/>
