@@ -21,6 +21,26 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
         //内部类实现
         mBtnEvent.setOnClickListener(new Onclck());
         btnMy = (MyButton) findViewById(R.id.btn_my);
+        btnMy.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()){
+
+                    case MotionEvent.ACTION_DOWN:
+                        Log.d("Listrner","onTounch......");
+                        break;
+
+                }
+                return false;
+            }
+        });
+
+        btnMy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("listener","..OnClick....");
+            }
+        });
         //匿名内部类实现
 //        mBtnEvent.setOnClickListener(new View.OnClickListener() {
 //            @Override

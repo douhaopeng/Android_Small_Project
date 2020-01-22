@@ -28,15 +28,19 @@ public class MyButton extends AppCompatButton {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-         super.onTouchEvent(event);
         switch (event.getAction()){
             case MotionEvent.ACTION_DOWN:
                 break;
 
         }
         Log.d("MyButton","...onTounch.....");
-        return false;
+        return       super.onTouchEvent(event);
+
     }
 
-
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        Log.d("MyButton","....dispatchTouchEvent....");
+        return super.dispatchTouchEvent(event);
+    }
 }
