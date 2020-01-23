@@ -20,5 +20,11 @@
         android:text="事件机制"
         android:textAllCaps="false"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_data"
+        android:text="数据存储"
+        android:textAllCaps="false"/>
 
 </LinearLayout>

@@ -1,5 +1,6 @@
 package com.ks.test;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +13,8 @@ import com.ks.test.widget.MyButton;
 public class EventActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button mBtnEvent;
+    private Button mBtnHandler;
+
     private MyButton btnMy;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +23,7 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
         mBtnEvent = (Button) findViewById(R.id.btn_event);
         //内部类实现
         mBtnEvent.setOnClickListener(new Onclck());
+        mBtnHandler = (Button) findViewById(R.id.btn_handler);
         btnMy = (MyButton) findViewById(R.id.btn_my);
         btnMy.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -35,6 +39,13 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
             }
         });
 
+        mBtnHandler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent  = new Intent(EventActivity.this,HandlerActivity.class);
+                startActivity(intent);
+            }
+        });
         btnMy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

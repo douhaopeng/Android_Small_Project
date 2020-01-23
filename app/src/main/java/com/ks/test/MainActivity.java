@@ -6,10 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.ks.test.datacc.DataStoreActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button mBtnUI;
-    private Button mBtnSJ;
+    private Button mBtnSJ,mBtnData;
 
 
     @Override
@@ -19,8 +21,10 @@ public class MainActivity extends AppCompatActivity {
         mBtnUI = (Button) findViewById(R.id.btn_ui);
         OnClick onClick = new OnClick();
         mBtnUI.setOnClickListener(onClick);
+        mBtnData = (Button) findViewById(R.id.btn_data);
         mBtnSJ = (Button) findViewById(R.id.btn_shijian);
         mBtnSJ.setOnClickListener(onClick);
+        mBtnData.setOnClickListener(onClick);
     }
 
     class OnClick implements View.OnClickListener{
@@ -33,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_shijian:
                     intent = new Intent(MainActivity.this,EventActivity.class);
+                    break;
+
+                case R.id.btn_data:
+                    intent = new Intent(MainActivity.this,DataStoreActivity.class);
                     break;
             }
             startActivity(intent);

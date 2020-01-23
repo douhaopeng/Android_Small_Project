@@ -55,7 +55,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".Fragment.ContainActivity" />
-        <activity android:name=".EventActivity"></activity>
+        <activity android:name=".EventActivity" />
+        <activity android:name=".HandlerActivity" />
+        <activity android:name=".datacc.DataStoreActivity" />
+        <activity android:name=".datacc.SharedPerenceActivity"></activity>
     </application>
 
 </manifest>

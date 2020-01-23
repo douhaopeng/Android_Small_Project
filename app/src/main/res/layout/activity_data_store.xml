@@ -1,34 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context="com.ks.test.EventActivity">
-
+    tools:context="com.ks.test.datacc.DataStoreActivity">
 
     <Button
         android:layout_width="match_parent"
-        android:id="@+id/btn_event"
-        android:text="click me"
-
+        android:text="SharedPerfernce"
         android:textAllCaps="false"
+        android:id="@+id/btn_sharedPrefrences"
         android:layout_height="wrap_content" />
 
-    <com.ks.test.widget.MyButton
-        android:text="MyButton"
-        android:textAllCaps="false"
-        android:layout_width="match_parent"
-
-        android:layout_height="50dp"
-        android:id="@+id/btn_my"/>
-
     <Button
         android:layout_width="match_parent"
-        android:id="@+id/btn_handler"
-        android:text="handler"
-
+        android:text="File"
         android:textAllCaps="false"
+        android:id="@+id/btn_file"
         android:layout_height="wrap_content" />
 
 
