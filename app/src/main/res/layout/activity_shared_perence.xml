@@ -12,6 +12,7 @@ tools:context="com.ks.test.datacc.SharedPerenceActivity">
     android:layout_height="wrap_content"
     android:hint="输入内容"
     android:id="@+id/et_name"/>
+
 <Button
     android:layout_width="match_parent"
     android:text="保存"
