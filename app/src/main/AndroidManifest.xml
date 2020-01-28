@@ -59,6 +59,8 @@
         <activity android:name=".HandlerActivity" />
         <activity android:name=".datacc.DataStoreActivity" />
         <activity android:name=".datacc.SharedPerenceActivity"></activity>
+        <activity android:name=".datacc.FileActivity"></activity>
+
     </application>
 
 </manifest>

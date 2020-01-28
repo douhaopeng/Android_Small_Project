@@ -10,12 +10,18 @@ import com.ks.test.R;
 public class DataStoreActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button mBtnSharedPerfernce;
+    private Button mBtnFile;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_store);
         mBtnSharedPerfernce = (Button) findViewById(R.id.btn_sharedPrefrences);
+        mBtnFile = (Button) findViewById(R.id.btn_file);
+
         mBtnSharedPerfernce.setOnClickListener(this);
+        mBtnFile.setOnClickListener(this);
+
     }
 
     @Override
@@ -25,6 +31,9 @@ public class DataStoreActivity extends AppCompatActivity implements View.OnClick
         switch (v.getId()){
             case R.id.btn_sharedPrefrences:
                 intent = new Intent(DataStoreActivity.this,SharedPerenceActivity.class);
+                break;
+            case R.id.btn_file:
+                intent = new Intent(DataStoreActivity.this,FileActivity.class);
                 break;
         }
         startActivity(intent);

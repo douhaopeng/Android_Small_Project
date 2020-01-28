@@ -26,10 +26,14 @@ public class SharedPerenceActivity extends AppCompatActivity {
         mTvContent = (TextView) findViewById(R.id.tv_content);
 
         mSharedPreferences = getSharedPreferences("data",MODE_PRIVATE);
+        mEditor = mSharedPreferences.edit();
+
         mBtnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                mEditor.putString("name",mEtname.getText().toString());
+                mEditor.apply();
             }
         });
 
@@ -37,9 +41,12 @@ public class SharedPerenceActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                mTvContent.setText(mSharedPreferences.getString("name",""));
             }
         });
 
 
     }
 }
+
+
